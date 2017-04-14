@@ -21,7 +21,9 @@ function greet(req, res) {
           function(value) { 
              if(value == undefined)  {
                   res.json(util.format('Nice to meet you %s!', name))
-                  client.put(name, new Date().toLocaleString())
+               
+                   client.put(name, '{"email": "abc@aaa.com","password": "pass@123"}')
+                  //client.put(name, new Date().toLocaleString())
              } else {
                   res.json(util.format('Welcome back %s! Your first visit here was on %s', name, value))
              }
